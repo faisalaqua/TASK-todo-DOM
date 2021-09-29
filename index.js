@@ -6,12 +6,12 @@ let tasks = [];
 let categories = [];
 
 // REMOVE ME: SAMPLE FILLING
-tasks = [
-  { id: 0, title: "Game of thrones", category: "Movies", done: false },
-  { id: 1, title: "Toy Story 4", category: "Movies", done: false },
-];
+// tasks = [
+//   { id: 0, title: "Game of thrones", category: "Movies", done: false },
+//   { id: 1, title: "Toy Story 4", category: "Movies", done: false },
+// ];
 
-categories = ["Movies", "Groceries"];
+// categories = ["Movies", "Groceries"];
 // SAMPLE
 renderCategories(categories, CATEGORY_SELECTOR);
 renderCategories(categories, CATEGORY_FILTER);
@@ -20,6 +20,7 @@ renderTasks(tasks, "tasks-list");
 function taskChecked(taskId, checked) {
   // implement the delete task.
   // You are given the task id
+  // GHADA FAISAL USE THIS FOR PART 5!
   console.log(`${checked ? "" : "UN"}CHECKED TASK`, taskId);
 }
 
@@ -27,6 +28,8 @@ function addTask() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_SELECTOR);
   const taskTitle = getNewTaskText();
   // continue the code here
+  const taskInput = { title: taskTitle, category: selectedCategory };
+  tasks.push(taskInput);
   alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
 }
 
