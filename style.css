@@ -1,3 +1,39 @@
 .todo-item {
   display: flex;
 }
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 30px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  display: inline-block;
+}
+.card {
+  background-color: rgb(240, 240, 240);
+  width: 800px;
+  height: 400px;
+  text-align: center;
+  justify-content: end;
+  padding: 50px;
+  margin: 100px;
+  margin-top: 100px;
+  display: inline-block;
+  font-size: 50x;
+}
+.btn-first {
+  background-color: rgb(76, 86, 203, 255);
+  color: rgb(240, 247, 247);
+  text-align: center;
+  width: 150px;
+  padding: 10px;
+  cursor: grabbing;
+  border-radius: 50px;
+  position: absolute;
+  left: 180px;
+  margin: -30px;
+}

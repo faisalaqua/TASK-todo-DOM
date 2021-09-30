@@ -6,12 +6,15 @@ let tasks = [];
 let categories = [];
 
 // REMOVE ME: SAMPLE FILLING
-// tasks = [
-//   { id: 0, title: "Game of thrones", category: "Movies", done: false },
-//   { id: 1, title: "Toy Story 4", category: "Movies", done: false },
-// ];
+tasks = [
+  { id: 0, title: "GYM - 6AM", category: "", done: false },
+  { id: 1, title: "Work - 7AM", category: "", done: false },
+  { id: 2, title: "CODED - 4PM", category: "", done: false },
+  { id: 3, title: "Netflix- 9PM", category: "", done: false },
+  { id: 4, title: "Sleep- 10PM", category: "", done: false },
+];
 
-// categories = ["Movies", "Groceries"];
+categories = ["Work", "Groceries", "Movies", "Books"];
 // SAMPLE
 renderCategories(categories, CATEGORY_SELECTOR);
 renderCategories(categories, CATEGORY_FILTER);
