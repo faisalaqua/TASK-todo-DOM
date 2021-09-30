@@ -6,15 +6,15 @@ let tasks = [];
 let categories = [];
 
 // REMOVE ME: SAMPLE FILLING
-tasks = [
-  { id: 0, title: "GYM - 6AM", category: "", done: false },
-  { id: 1, title: "Work - 7AM", category: "", done: false },
-  { id: 2, title: "CODED - 4PM", category: "", done: false },
-  { id: 3, title: "Netflix- 9PM", category: "", done: false },
-  { id: 4, title: "Sleep- 10PM", category: "", done: false },
-];
+// tasks = [
+//   { id: 0, title: "GYM - 6AM", category: "", done: false },
+//   { id: 1, title: "Work - 7AM", category: "", done: false },
+//   { id: 2, title: "CODED - 4PM", category: "", done: false },
+//   { id: 3, title: "Netflix- 9PM", category: "", done: false },
+//   { id: 4, title: "Sleep- 10PM", category: "", done: false },
+// ];
 
-categories = ["Work", "Groceries", "Movies", "Books"];
+// categories = ["Work", "Groceries", "Movies", "Books"];
 // SAMPLE
 renderCategories(categories, CATEGORY_SELECTOR);
 renderCategories(categories, CATEGORY_FILTER);
@@ -31,9 +31,17 @@ function addTask() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_SELECTOR);
   const taskTitle = getNewTaskText();
   // continue the code here
-  const taskInput = { title: taskTitle, category: selectedCategory };
+  let iteration = 0;
+  iteration = iteration + 1;
+  const taskInput = {
+    id: iteration,
+    title: taskTitle,
+    category: selectedCategory,
+    done: false,
+  };
   tasks.push(taskInput);
-  alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
+  renderTasks(tasks, "tasks-list");
+  // alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
 }
 
 function addCategory() {
