@@ -23,7 +23,8 @@ renderTasks(tasks, "tasks-list");
 function taskChecked(taskId, checked) {
   // implement the delete task.
   // You are given the task id
-  // GHADA FAISAL USE THIS FOR PART 5!
+  // tasksId.filter((itsDone) => itsDone.done === True);
+  tasks.find((task) => task.id === taskId).done = checked;
   console.log(`${checked ? "" : "UN"}CHECKED TASK`, taskId);
 }
 
@@ -47,13 +48,17 @@ function addTask() {
 function addCategory() {
   const newCategory = getNewCategoryText();
   // continue the code here
+  categories.push(newCategory);
+  renderCategories(categories, CATEGORY_SELECTOR);
   alert(`New category was added: ${newCategory}`);
 }
 
 function filterTasks() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_FILTER);
   const done = getFilteredDone();
+  renderfilterTasks(filterTasks);
   // continue the code here
+
   // REMOVE ME: sample alert
   alert(`Category: ${selectedCategory} | done: ${done}`);
 }
